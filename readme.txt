@@ -5,3 +5,4 @@
   - в тэге center ссылка с банером - добавить ей класс "banner_inner" 
   - дивы "anons" обернуть в anons_wrap
   - пути у скрипта переписаны
+  - 775 - onclick='if (value==defaultValue)'

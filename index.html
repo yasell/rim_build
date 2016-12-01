@@ -88,13 +88,14 @@
       clear: both;
       overflow: hidden;
       zoom: 1;
-    }
-
-    #headerrim {
       padding-left: 3%;
       height: 265px;
       background: url(../../../../img/fon.gif) repeat-x;
     }
+
+    #headerrim table {width: 100%;}
+    #headerrim table td:first-child {width: 155px;}
+    #headerrim table td:nth-last-child(2) {width: 619px;}
 
     .logo {
       padding-top: 8px;
@@ -341,6 +342,8 @@
       color: #555;
       text-decoration: none;
     }
+
+    .sub a span {color: red;}
 
     .menu {
       float: left;
@@ -674,9 +677,9 @@
   <div id='container'>
     <div id='headerrim'>
 
-      <table width="100%">
+      <table>
         <tr>
-          <td width="155">
+          <td>
             <div class='logomenu'>
               <a href='index.html'><img class='logo' src='img/logo.gif' title='Компания РИМ' alt='Компания РИМ'></a>
               <div class='gruppa'>эксперт по воротам</div>
@@ -694,7 +697,7 @@
             </div>
           </td>
           <td>&nbsp;</td>
-          <td width="619">
+          <td>
             <div class='dom'>
               <a class='vorota'>Автоматические ворота</a><a class='jaluzi' href='jaluzi.html'>Жалюзи и шторы</a><a class='rolstavni' href='rolstavni.html'>Рольставни</a><a class='avtomatika' href='avtomatika-i-shlagbaumy.html'>Автоматика и шлагбаумы</a>
               <a class='pokritiya' href='napolnye-pokrytiya.html'>Напольные покрытия</a><a class='okna' href='landing/okna/index.html'>Окна</a>
@@ -731,6 +734,11 @@
           <li class="header__menu-item">
             <a href="landing/okna/index.html" class="header__menu-link"> Окна </a>
           </li>
+          <li class="header__menu-item  sub">
+            <a class="header__menu-link" href="ordere964.html?buy=vorota">
+              <span> Оставить заявку </span>
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -764,7 +772,7 @@
         <div class='search'>
           <form action='http://www.imperia-rim.ru/search/topics/' method='GET'>
             <div class='se2'><input class='search-submit' type='submit' value='Найти' /></div>
-            <div class='se1'><input class='text' type='text' onblur='if (!value) value=defaultValue' onclick='if (value==defaultValue)' value='Поиск по сайту' name='q'></div>
+            <div class='se1'><input class='text' type='text' onblur='if (!value) value=defaultValue' value='Поиск по сайту' name='q'></div>
           </form>
         </div>
 
@@ -788,7 +796,7 @@
             <div class='sub'>- <a href='voprosy-i-otvety-pro-vorota.html'>Вопросы и ответы</a></div>
             <div class='sub'>-
               <a href='ordere964.html?buy=vorota'>
-                <span color='red'>Оставить заявку</span>
+                <span>Оставить заявку</span>
               </a>
             </div>
           </li>
