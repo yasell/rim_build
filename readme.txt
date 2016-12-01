@@ -1,7 +1,7 @@
 - все стили к адаптиву в templates/skin/new/css/style.css
 - изменения в разметке: 
   - в #footer добавить обертку див footer_social
-  - iframe с ютьюба обернуть в video_inner
+  - iframe с ютьюба обернуть в video_inner + https/
   - в тэге center ссылка с банером - добавить ей класс "banner_inner" 
   - дивы "anons" обернуть в anons_wrap
-  - 
+  - пути у скрипта переписаны
