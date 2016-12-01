@@ -1030,8 +1030,6 @@ table.admin_page td  {  /* IE: */ border-left: expression(previousSibling == nul
 
 	background-color: #fff;
 	border: 1px solid #ccc;
-	-moz-box-shadow: 0 0 10px #ddd;
-	-webkit-box-shadow: 0 0 10px #ddd;
 	box-shadow: 0 0 10px #ddd;
 }
 .userfield-form p { margin-bottom: 10px; }
@@ -1076,8 +1074,6 @@ table.admin_page td  {  /* IE: */ border-left: expression(previousSibling == nul
 	display: none;
 	background-color: #fff;
 	border: 1px solid #ccc;
-	-moz-box-shadow: 0 0 10px #ddd;
-	-webkit-box-shadow: 0 0 10px #ddd;
 	box-shadow: 0 0 10px #ddd;
 }
 #photoset-upload-form p { margin-bottom: 10px; }
@@ -1125,26 +1121,40 @@ box-shadow: 0 0 9px #0978D1;
 
 .promo {width:100%;}
 .promo a {text-decoration:none; width:99.8%; border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px; -khtml-border-radius:5px; border:1px solid #D20B16;
-background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: cover; background-size: cover; color: #D20B16; text-align: center; font-size:33px; line-height: 33px; padding: 20px 0 20px 0; display:block; margin: 0 0 20px 0;}
+background: url(../../../../img/fon_act.jpg) repeat-x; background-size: cover; color: #D20B16; text-align: center; font-size:33px; line-height: 33px; padding: 20px 0 20px 0; display:block; margin: 0 0 20px 0;}
 .promo a:hover {border:1px solid #0978D1; color:#0978D1;}
 .footer_social {display: inline-block;}
 .video_inner {width: 100%;}
 .video_inner iframe {max-width: 100% !important;}
-.anons_wrap {display: flex;}
+.anons_wrap {display: -webkit-flex;display: -ms-flexbox;display: flex;}
 
 
 /* for burger menu */
 .header__menu-list,
 .header__menu-row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  align-content: flex-start;
-  align-items: center; }
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 .header__menu-row {
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   will-change: transform; }
 
 /* burger */
@@ -1176,7 +1186,9 @@ background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: 
     height: 0.4rem;
     margin-top: -.2rem;
     background: #82A509;
-    transform: translate(0, -1rem);
+    -webkit-transform: translate(0, -1rem);
+        -ms-transform: translate(0, -1rem);
+            transform: translate(0, -1rem);
     transition: all 0.3s ease; }
   .menu__trigger:after {
     content: "";
@@ -1187,15 +1199,21 @@ background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: 
     height: 0.4rem;
     margin-top: -.2rem;
     background: #82A509;
-    transform: translate(0, 1rem);
+    -webkit-transform: translate(0, 1rem);
+        -ms-transform: translate(0, 1rem);
+            transform: translate(0, 1rem);
     transition: all 0.3s ease; }
 
 /* X */
 .menu__trigger.active__mod:before {
-  transform: rotate(45deg) translate(0, 0); }
+  -webkit-transform: rotate(45deg) translate(0, 0);
+      -ms-transform: rotate(45deg) translate(0, 0);
+          transform: rotate(45deg) translate(0, 0); }
 
 .menu__trigger.active__mod:after {
-  transform: rotate(-45deg) translate(0, 0); }
+  -webkit-transform: rotate(-45deg) translate(0, 0);
+      -ms-transform: rotate(-45deg) translate(0, 0);
+          transform: rotate(-45deg) translate(0, 0); }
 
 .menu__trigger-decor {
   position: absolute;
@@ -1209,7 +1227,9 @@ background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: 
 
 .active__mod .menu__trigger-decor {
   opacity: 0;
-  transform: translate(100%, 0); }
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0); }
 
 /* main menu */
 .header__menu-row {
@@ -1245,10 +1265,14 @@ background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: 
 
 @media (max-width: 960px) {
   .anons_wrap {
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
   .anons {
-    flex: 0 1 50%;
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
   }
 }
 
@@ -1257,8 +1281,12 @@ background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: 
     padding: 0 3%;
     width: 95%;
     height: auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #slayd > a {
     width: 100% !important;
@@ -1266,13 +1294,17 @@ background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: 
     text-decoration: none;
     color: #097AD6;
     font-size: 18px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 10px;
-    background: #b0b4ae !important; /* Old browsers */
-    background: -moz-linear-gradient(left,  #b0b4ae 0%, #d7dad4 60%, #f5f7ef 100%) !important; /* FF3.6-15 */
-    background: -webkit-linear-gradient(left,  #b0b4ae 0%,#d7dad4 60%,#f5f7ef 100%) !important; /* Chrome10-25,Safari5.1-6 */
+    background: #b0b4ae !important; /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right,  #b0b4ae 0%,#d7dad4 60%,#f5f7ef 100%) !important; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0b4ae', endColorstr='#f5f7ef',GradientType=1 ) !important; /* IE6-9 */
   }
@@ -1290,10 +1322,18 @@ background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: 
   #headerrim table td:nth-last-child(2) {display: none !important;}
   #headerrim .logomenu {
     width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; }
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .social {
     top: 70px;
     left: 0;
@@ -1308,19 +1348,37 @@ background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: 
   .header__menu-item {
     padding: 2rem 0 0; }
   .header__menu-row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-content: flex-start;
-    align-items: center;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+            align-content: flex-start;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 100%;
     background: #fff;
-    transform: translate(0, -100%); }
+    -webkit-transform: translate(0, -100%);
+        -ms-transform: translate(0, -100%);
+            transform: translate(0, -100%); }
   body.menu__open .header__menu-row {
-    transform: translate(0, 0); }
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0); }
   .header__menu-list {
-    flex-direction: column; }
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
 }
 
 @media (max-width: 520px) {
@@ -1332,11 +1390,16 @@ background: url(../../../../img/fon_act.jpg) repeat-x; -webkit-background-size: 
 
 @media (max-width: 480px) {
   .anons_wrap {
-    flex-direction: column;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .anons {
     width: 100%;
-    flex: auto;
+    -webkit-flex: auto;
+        -ms-flex: auto;
+            flex: auto;
   }
   .highimg {display: none;}
+  #slayd2 img{width: 23%;}
 }
