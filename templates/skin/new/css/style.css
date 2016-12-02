@@ -46,7 +46,7 @@ p span { color: #0978D1; }
 -------------------------------------------------------------------*/
 #container {width:100%; max-width: 1900px; overflow: hidden;}
 #header { height: 80px; clear: both; overflow: hidden; zoom: 1; /*background: #000 url(../images/header-bg.gif) repeat-x;*/ }
-#headerrim {padding-left:3%; height: 265px; clear: both; overflow: hidden; zoom: 1; background: url(../../../../img/fon.gif) repeat-x; }
+#headerrim {padding-left:3%; clear: both; overflow: hidden; zoom: 1; background: url(../../../../img/fon.gif) repeat-x; }
 
 #nav { clear: b2oth; /*background: #e8e8e8; */}
 #wrapper { overflow: hidden; zoom: 1; margin-bottom: 30px; padding: 20px 46px 30px 20px; }
@@ -63,7 +63,7 @@ p span { color: #0978D1; }
 #headerrim .logomenu {width:146px;}
 #headerrim .gruppa {width:146px; text-align: center; color: #333; font-size: 10px; margin-top: -5px; height:15px;}
 #headerrim .headermenu {padding: 12px 0 0 0; margin: 0 0 0 0;}
-#headerrim .menu  {width: 154px; height: 25px; background: url(../../../../img/menu1.gif) no-repeat 0 13px; padding: 5px 0 0 20px; color: #000; text-decoration: none;}
+#headerrim .menu  {width: 154px; height: 25px; background: url(../../../../img/menu1.gif) no-repeat 0 13px; padding: 5px 20px 5px 20px; color: #000; text-decoration: none;}
 #headerrim .menu:hover  {background: url(../../../../img/menu1hover.gif) no-repeat 0 13px; }
 
 #headerrim .dom  {width: 619px; height:265px; position: relative; background: url(../../../../img/dom.gif) no-repeat; font-size: 14px;}
@@ -1169,11 +1169,11 @@ background: url(../../../../img/fon_act.jpg) repeat-x; background-size: cover; c
   z-index: 210;
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 0.5rem;
   display: none;
   height: 3rem;
   width: 3rem;
-  margin-top: -1.6rem;
+  margin-top: -1.8rem;
   text-transform: uppercase;
   color: transparent;
   cursor: pointer; }
@@ -1342,6 +1342,7 @@ background: url(../../../../img/fon_act.jpg) repeat-x; background-size: cover; c
     width: 288px;
   }
   #headerrim .headermenu {padding: 40px 0 0 0;}
+  #headerrim .menu {margin-bottom: 5px;}
   /* burger */
   .menu__trigger {
     display: block; }
@@ -1379,6 +1380,7 @@ background: url(../../../../img/fon_act.jpg) repeat-x; background-size: cover; c
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column; }
+  #footer a {margin: 0 5px;}
 }
 
 @media (max-width: 520px) {
